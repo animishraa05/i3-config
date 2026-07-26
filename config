@@ -1,0 +1,16 @@
+# made by ani
+exec --no-startup-id systemctl --user import-environment DISPLAY XAUTHORITY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS
+exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS
+exec --no-startup-id fcitx5
+exec --no-startup-id blueman-applet
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+include ~/.config/i3/workspaces.conf
+exec_always --no-startup-id xinput set-prop "DELL0A36:00 06CB:CE65 Touchpad" "libinput Tapping Enabled" 1
+include ~/.config/i3/appearance.conf
+include ~/.config/i3/keymaps.conf
+include ~/.config/i3/windowrules.conf
+
+include ~/.config/i3/autostart.conf
+focus_follows_mouse yes
+focus_wrapping yes
+exec --no-startup-id env XDG_CURRENT_DESKTOP=i3

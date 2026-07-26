@@ -1,0 +1,11 @@
+# made by ani
+include ~/.config/i3/workspaces.conf
+include ~/.config/i3/appearance.conf
+include ~/.config/i3/keymaps.conf
+include ~/.config/i3/windowrules.conf
+include ~/.config/i3/autostart.conf
+focus_follows_mouse yes
+focus_wrapping yes
+
+bindsym Mod1+Tab exec --no-startup-id bash -c 'i3-msg fullscreen disable; i3-msg focus right; i3-msg fullscreen enable'
+
